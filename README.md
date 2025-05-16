@@ -258,4 +258,4 @@ Training metrics are saved to TensorBoard logs in the runs directory. To visuali
 * Hugging Face: For the pre-trained building segmentation model (keremberke/yolov8m-building-segmentation).
 * Google Colab: For providing the environment to develop and test the project.
 # Contact
-* For questions or issues, please open an issue on GitHub or contact the repository owner at <your-email> (replace with your email).
+* For questions or issues, please open an issue on GitHub or contact the repository owner at <anirudh21india@gmail.com>
