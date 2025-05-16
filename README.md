@@ -130,7 +130,7 @@ The script defines two custom YOLOv8 configurations:
 # Run Training
 # model_house.train(
     data=f"{dataset_location_house}/data.yaml",
-    epochs=20,
+    epochs=50,
     imgsz=640,
     batch=16,
     patience=20,
@@ -146,7 +146,7 @@ The script defines two custom YOLOv8 configurations:
 
 # model_tree.train(
     data=f"{dataset_location_tree}/data.yaml",
-    epochs=20,
+    epochs=50,
     imgsz=640,
     batch=16,
     patience=5,
