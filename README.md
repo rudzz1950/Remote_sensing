@@ -174,6 +174,7 @@ The script defines two custom YOLOv8 configurations:
   * uploaded = files.upload()
   * img_path = list(uploaded.keys())[0]
   * For local use, modify this to specify the image path directly:
+  * upload a TIF files using Tools such as QGIS
   * img_path = "path/to/your/image.jpg"
 #  Load Models
 * House Detection Model:
