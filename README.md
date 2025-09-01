@@ -1,4 +1,4 @@
-# 🌍 Remote Sensing Detector
+# 🌍 Remote Sensing Urban Planner
 
 A powerful tool for detecting and segmenting buildings and trees in aerial/satellite imagery using YOLOv8. This project provides both a Python API and a web interface for easy interaction.
 
