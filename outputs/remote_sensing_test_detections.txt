@@ -1,0 +1,9 @@
+Detection Results:
+====================
+
+Detected 1 objects:
+
+1. Class: unknown (ID: 79)
+   Confidence: 0.2692
+   Bounding Box: [350.55, 499.49, 450.62, 797.79]
+

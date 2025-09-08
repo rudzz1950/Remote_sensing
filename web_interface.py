@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import numpy as np
 import tempfile
-from .detector import RemoteSensingDetector
+from detector import RemoteSensingDetector
 
 class RemoteSensingWebUI:
     """Gradio-based web interface for the Remote Sensing Detector."""

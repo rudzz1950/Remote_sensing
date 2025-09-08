@@ -1,0 +1,9 @@
+Detection Results:
+====================
+
+Detected 1 objects:
+
+1. Label: frisbee (ID: 29)
+   Confidence: 0.5545
+   Bounding Box: [319, 70, 481, 232]
+

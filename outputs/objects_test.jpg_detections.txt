@@ -1,0 +1,17 @@
+Detection Results:
+====================
+
+Detected 3 objects:
+
+1. Label: kite (ID: 33)
+   Confidence: 0.8760
+   Bounding Box: [445, 271, 556, 456]
+
+2. Label: frisbee (ID: 29)
+   Confidence: 0.6097
+   Bounding Box: [219, 159, 381, 242]
+
+3. Label: kite (ID: 33)
+   Confidence: 0.3418
+   Bounding Box: [219, 159, 381, 242]
+

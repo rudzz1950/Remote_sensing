@@ -15,11 +15,10 @@ from typing import Dict, Optional
 from src.detector import RemoteSensingDetector
 from src.web_interface import run_web_ui
 
-# Default model paths (update these with your actual model paths)
+# Default model paths using the downloaded ONNX models
 DEFAULT_MODEL_PATHS = {
-    'building_detection': 'models/building_detection.pt',
-    'building_segmentation': 'models/building_segmentation.pt',
-    'tree_segmentation': 'models/tree_segmentation.pt'
+    'building_detection': 'models/yolov8n.onnx',
+    'tree_segmentation': 'models/yolov8n-seg.onnx'
 }
 
 def parse_args():
@@ -102,25 +101,22 @@ def parse_args():
 def ensure_model_paths(model_dir: str) -> Dict[str, str]:
     """Ensure model paths exist and return a dictionary of valid paths."""
     model_paths = {}
-    model_dir = Path(model_dir)
     
-    for model_name, default_path in DEFAULT_MODEL_PATHS.items():
-        # Check if default path exists
-        if os.path.exists(default_path):
-            model_paths[model_name] = str(default_path)
-            continue
-            
-        # Check in model directory
-        model_path = model_dir / f"{model_name}.pt"
-        if model_path.exists():
-            model_paths[model_name] = str(model_path)
+    for model_name, model_path in DEFAULT_MODEL_PATHS.items():
+        # If path is not absolute, make it relative to model_dir
+        full_path = Path(model_path) if Path(model_path).is_absolute() else Path(model_dir) / Path(model_path).name
+        
+        if full_path.exists():
+            model_paths[model_name] = str(full_path)
+        else:
+            print(f"Warning: Model file not found: {full_path}")
     
     if not model_paths:
         raise FileNotFoundError(
             f"No model files found in {model_dir}. "
-            "Please ensure model files are present or specify --model-dir."
+            f"Please ensure the following models are present: {list(DEFAULT_MODEL_PATHS.values())}"
         )
-        
+    
     return model_paths
 
 def main():
